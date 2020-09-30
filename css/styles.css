@@ -1,0 +1,146 @@
+:root{
+  --color-red:hsl(0, 78%, 62%);
+  --color-cyan:hsl(180, 62%, 55%);
+  --color-orange:hsl(34, 97%, 64%);
+  --color-blue:hsl(212, 86%, 64%);
+  --color-darkblue:hsl(234, 12%, 34%);
+  --color-grayishblue:hsl(229, 6%, 66%);
+  --color-vlg:hsl(0, 0%, 98%);
+  --font-size: 0.9375rem;
+  --font-family: "Poppins",sans-serif;
+  --font-weight-1: 700;
+  --font-weight-2: 400;
+  --font-weight-3: 200;
+}
+
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body{
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+}
+
+p{
+  font-weight: var(--font-weight-3);
+  line-height: 150%;
+  letter-spacing: 0.4px;
+  color: var(--color-grayishblue);
+}
+
+main{
+   padding-right: 10px;
+}
+
+.container{
+  padding: 16px;
+  margin: auto;
+}
+
+.head{
+  text-align: center;
+  margin-top: 20px;
+
+}
+
+.title{
+  font-weight: var(--font-weight-2);
+  font-size: 2.5rem;
+  line-height: 3rem;
+  color: var(--color-darkblue);
+  margin-bottom: 0;
+}
+
+.highlight{
+  font-weight: var(--font-weight-1);
+  margin-top: 0;
+}
+
+.container p{
+  font-weight: var(--font-weight-3);
+  line-height: 150%;
+  letter-spacing: 0.4px;
+  margin-top: 10px;
+  padding: 0 25% 0 25%;
+  color: var(--color-grayishblue);
+}
+
+.main{
+  display:grid;
+  grid-template-columns: 1fr;
+  margin: 4rem auto;
+  grid-gap: 1.5rem;
+  place-items:center;
+}
+
+.main > div{
+    border-radius: .75rem;
+    box-shadow: 0px 10px 20px #bbb;
+    padding: 3rem;
+    width: 320px;
+    border-top: 0.25rem solid;
+}
+
+.main .supervisor{
+    border-color: var(--color-cyan);
+}
+.main .team-builder{
+    border-color: var(--color-red);
+}
+.main .karma{
+    border-color: var(--color-orange);
+}
+.main .calculator{
+    border-color: var(--color-blue);
+}
+.icon{
+    display:flex;
+    margin-left: auto;
+    margin-top: 3rem;
+}
+
+@media screen and (min-width:1140px){
+    .container{
+        width:1160px;
+    }
+    .main{
+        grid-template-columns:1fr 1fr 1fr;
+    }
+
+    .supervisor{
+      grid-row: 2/4;
+    }
+
+    .team-builder{
+      grid-row: 1/3;
+    }
+
+    .karma{
+      grid-row: 3/5;
+
+    }
+
+    .calculator{
+      grid-row: 2/4;
+    }
+}
+
+@media screen and (min-width:768px){
+
+  .container{
+      width: 1160px;
+
+  }
+
+  .main{
+      grid-template-columns: repeat(2,1fr);
+  }
+
+  .main > div{
+    width: 420px;
+  }
+}
