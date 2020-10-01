@@ -109,6 +109,9 @@ main{
     }
     .main{
         grid-template-columns:1fr 1fr 1fr;
+        padding-right: 50%;
+        padding-left: 50%;
+        transform: translateX(-650px);
     }
 
     .supervisor{
